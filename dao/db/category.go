@@ -46,4 +46,5 @@ func GetAllCategory() (categoryList []*model.Category, err error) {
 	sqlstr := "select id,category_name,category_no,status,create_time from category where id in(1,2,3) order by category_no asc"
 	err = DB.Select(&categoryList, sqlstr)
 	return
+
 }
